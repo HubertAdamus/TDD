@@ -1,12 +1,13 @@
 <?php
- namespace CodeLab;
+namespace CodeLab;
 
- class Calendar{
+class Calendar
+{
 
-     function is_leap_year($year)
-     {
-         if (is_int($year)){
-             return (($year % 4) == 0) && ((($year % 100) != 0) || (($year %400) == 0));
-         }
-     }
- }
+    function is_leap_year($year)
+    {
+        if (is_int($year)) {
+            return (($year % 4) == 0) && ((($year % 100) != 0) || (($year % 400) == 0));
+        }
+    }
+}

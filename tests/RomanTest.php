@@ -10,7 +10,7 @@ class RomanTest extends PHPUnit_Framework_TestCase
      * @param $expected
      * @dataProvider additionProvider
      */
-    public  function testRoman($number, $expected)
+    public function testRoman($number, $expected)
     {
         $this->assertEquals($this->number->roman($number), $expected, "Roman numbers works");
 
@@ -36,6 +36,7 @@ class RomanTest extends PHPUnit_Framework_TestCase
     {
         $this->number = new CodeLab\Roman();
     }
+
     public function tearDown()
     {
 

@@ -1,8 +1,10 @@
 <?php
 require 'vendor/autoload.php';
+
 class CalendarTest extends PHPUnit_Framework_TestCase
 {
     protected $year;
+
     /**
      * @param $testYear
      * @dataProvider additionProvider
@@ -12,6 +14,7 @@ class CalendarTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($this->year->is_leap_year($testYear), "This year is leap year");
         //$this->assertFalse($this->year->is_leap_year($testYear), "This year is not leap year");
     }
+
     public function additionProvider()
     {
         return array(
@@ -24,10 +27,12 @@ class CalendarTest extends PHPUnit_Framework_TestCase
             array(0),
         );
     }
+
     public function setUp()
     {
         $this->year = new CodeLab\Calendar();
     }
+
     public function tearDown()
     {
 

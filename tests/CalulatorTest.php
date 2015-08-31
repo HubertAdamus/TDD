@@ -1,7 +1,8 @@
 <?php
 require 'vendor/autoload.php';
 
-class CalculatorTest extends PHPUnit_Framework_TestCase{
+class CalculatorTest extends PHPUnit_Framework_TestCase
+{
     protected $calculator;
 
     /**
@@ -10,7 +11,7 @@ class CalculatorTest extends PHPUnit_Framework_TestCase{
      * @param $expected
      * @dataProvider additionProvider1
      */
-    public  function testAdd($a, $b, $expected)
+    public function testAdd($a, $b, $expected)
     {
         $this->assertEquals($this->calculator->add($a, $b), $expected, "Assertion add works");
 
@@ -35,11 +36,11 @@ class CalculatorTest extends PHPUnit_Framework_TestCase{
      * @dataProvider additionProvider3
      * @expectedException Exception
      */
-    public  function testDivide($a, $b, $expected)
+    public function testDivide($a, $b, $expected)
     {
-        if ($b == 0){
+        if ($b == 0) {
             throw new \Exception("Nie dziel przez 0");
-        }else{
+        } else {
             $this->assertEquals($this->calculator->divide($a, $b), $expected, "Assertion divide works");
         }
     }
@@ -66,6 +67,7 @@ class CalculatorTest extends PHPUnit_Framework_TestCase{
     {
         $this->calculator = new CodeLab\Calculator();
     }
+
     public function tearDown()
     {
 

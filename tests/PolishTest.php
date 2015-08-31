@@ -10,9 +10,9 @@ class PolishTest extends PHPUnit_Framework_TestCase
      * @param $expected
      * @dataProvider additionProvider
      */
-    public  function testRoman($number, $expected)
+    public function testRoman($number, $expected)
     {
-        $stringTrim=trim($this->number->polish($number));
+        $stringTrim = trim($this->number->polish($number));
         $this->assertEquals($stringTrim, $expected, "Polish numbers works");
 
     }
@@ -41,6 +41,7 @@ class PolishTest extends PHPUnit_Framework_TestCase
     {
         $this->number = new CodeLab\Polish();
     }
+
     public function tearDown()
     {
 
